@@ -9,7 +9,7 @@ import (
 	"github.com/hieven/go-instagram/utils"
 )
 
-func NewConfig(username string, password string) cnf *config.Config {
+func NewConfig(username string, password string) (cnf *config.Config) {
 	return &config.Config{
 		Username: username,
 		Password: password,
