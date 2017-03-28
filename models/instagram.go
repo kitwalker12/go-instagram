@@ -5,6 +5,7 @@ import (
 	"errors"
 	"net/url"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/hieven/go-instagram/config"
 	"github.com/hieven/go-instagram/constants"
 	"github.com/hieven/go-instagram/session"
@@ -47,6 +48,16 @@ type likeRequest struct {
 }
 
 type likeResponse struct {
+	DefaultResponse
+}
+
+type relationshipRequest struct {
+	UserID string `json:"user_id"`
+	loginRequest
+}
+
+type relationshipResponse struct {
+	FriendshipStatus string `json:"friendship_status"`
 	DefaultResponse
 }
 
@@ -146,6 +157,38 @@ func (ig *Instagram) Unlike(mediaID string) error {
 		Send(string(jsonData)))
 
 	var resp loginResponse
+	json.Unmarshal([]byte(body), &resp)
+
+	if resp.Status == "fail" {
+		return errors.New(resp.Message)
+	}
+
+	return nil
+}
+
+func (ig *Instagram) Follow(userID string) error {
+	url := constants.GetURL("Follow", struct{ ID string }{ID: userID})
+
+	igSigKeyVersion, signedBody := ig.CreateSignature()
+
+	payload := relationshipRequest{
+		UserID: userID,
+	}
+	payload.IgSigKeyVersion = igSigKeyVersion
+	payload.SignedBody = signedBody
+
+	jsonData, _ := json.Marshal(payload)
+
+	agent := ig.AgentPool.Get()
+	defer ig.AgentPool.Put(agent)
+
+	_, body, _ := ig.SendRequest(agent.Post(url).
+		Type("multipart").
+		Send(string(jsonData)))
+
+	spew.Dump(body)
+
+	var resp relationshipResponse
 	json.Unmarshal([]byte(body), &resp)
 
 	if resp.Status == "fail" {

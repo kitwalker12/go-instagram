@@ -48,6 +48,8 @@ var ROUTES = struct {
 	TimelineFeed         string
 	Like                 string
 	Unlike               string
+	Follow               string
+	UnFollow             string
 }{
 	HOSTNAME:     HOSTNAME,
 	WEB_HOSTNAME: WEB_HOSTNAME,
@@ -63,4 +65,6 @@ var ROUTES = struct {
 	TimelineFeed:         API_ENDPOINT + "feed/timeline/?rank_token={{.RankToken}}{{if .MaxID}}&max_id={{.MaxID}}{{end}}&ranked_content=true",
 	Like:                 API_ENDPOINT + "media/{{.ID}}/like/",
 	Unlike:               API_ENDPOINT + "media/{{.ID}}/unlike/",
+	Follow:               API_ENDPOINT + "friendships/create/{{.ID}}/",
+	UnFollow:             API_ENDPOINT + "friendships/destroy/{{.ID}}/",
 }
