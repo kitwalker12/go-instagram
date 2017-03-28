@@ -1,8 +1,8 @@
 package testUtils
 
 import (
-	"github.com/hieven/go-instagram/utils"
 	"github.com/jarcoal/httpmock"
+	"github.com/kitwalker12/go-instagram/utils"
 )
 
 func MockAgentPool(capacity int) (*utils.SuperAgentPool, error) {

@@ -3,12 +3,12 @@ package models_test
 import (
 	"testing"
 
-	"github.com/hieven/go-instagram/config"
-	"github.com/hieven/go-instagram/constants"
-	. "github.com/hieven/go-instagram/models"
-	"github.com/hieven/go-instagram/session"
-	"github.com/hieven/go-instagram/testUtils"
 	"github.com/jarcoal/httpmock"
+	"github.com/kitwalker12/go-instagram/config"
+	"github.com/kitwalker12/go-instagram/constants"
+	. "github.com/kitwalker12/go-instagram/models"
+	"github.com/kitwalker12/go-instagram/session"
+	"github.com/kitwalker12/go-instagram/testUtils"
 	"github.com/parnurzeal/gorequest"
 
 	"github.com/stretchr/testify/suite"

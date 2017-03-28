@@ -6,8 +6,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/hieven/go-instagram/config"
-	"github.com/hieven/go-instagram/constants"
+	"github.com/kitwalker12/go-instagram/config"
+	"github.com/kitwalker12/go-instagram/constants"
 	"gopkg.in/redis.v5"
 )
 

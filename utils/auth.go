@@ -5,7 +5,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 
-	"github.com/hieven/go-instagram/constants"
+	"github.com/kitwalker12/go-instagram/constants"
 	UUID "github.com/satori/go.uuid"
 )
 

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/hieven/go-instagram/constants"
-	"github.com/hieven/go-instagram/utils"
+	"github.com/kitwalker12/go-instagram/constants"
+	"github.com/kitwalker12/go-instagram/utils"
 )
 
 type Location struct {

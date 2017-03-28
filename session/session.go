@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/hieven/go-instagram/config"
+	"github.com/kitwalker12/go-instagram/config"
 )
 
 type Session interface {

@@ -6,10 +6,10 @@ import (
 	"net/url"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/hieven/go-instagram/config"
-	"github.com/hieven/go-instagram/session"
-	"github.com/hieven/go-instagram/utils"
+	"github.com/kitwalker12/go-instagram/config"
 	"github.com/kitwalker12/go-instagram/constants"
+	"github.com/kitwalker12/go-instagram/session"
+	"github.com/kitwalker12/go-instagram/utils"
 	"github.com/parnurzeal/gorequest"
 )
 

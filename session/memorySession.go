@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/hieven/go-instagram/constants"
+	"github.com/kitwalker12/go-instagram/constants"
 )
 
 type MemorySession struct {

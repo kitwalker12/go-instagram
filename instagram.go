@@ -3,10 +3,10 @@ package instagram
 import (
 	"errors"
 
-	"github.com/hieven/go-instagram/config"
-	"github.com/hieven/go-instagram/session"
-	"github.com/hieven/go-instagram/utils"
+	"github.com/kitwalker12/go-instagram/config"
 	"github.com/kitwalker12/go-instagram/models"
+	"github.com/kitwalker12/go-instagram/session"
+	"github.com/kitwalker12/go-instagram/utils"
 )
 
 func NewConfig(username string, password string) (cnf *config.Config) {
