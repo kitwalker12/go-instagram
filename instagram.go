@@ -9,6 +9,13 @@ import (
 	"github.com/hieven/go-instagram/utils"
 )
 
+func NewConfig(username string, password string) cnf *config.Config {
+	return &config.Config{
+		Username: username,
+		Password: password,
+	}
+}
+
 func New(cnf *config.Config) (ig *models.Instagram, err error) {
 	if cnf.Username == "" {
 		return nil, errors.New("username is required")
