@@ -4,9 +4,9 @@ import (
 	"errors"
 
 	"github.com/hieven/go-instagram/config"
-	"github.com/hieven/go-instagram/models"
 	"github.com/hieven/go-instagram/session"
 	"github.com/hieven/go-instagram/utils"
+	"github.com/kitwalker12/go-instagram/models"
 )
 
 func NewConfig(username string, password string) (cnf *config.Config) {
